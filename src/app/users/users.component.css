@@ -1,0 +1,16 @@
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: green;
+}
+.myImage {
+  width: auto;
+  height: 100px;
+  border-radius: 100px;
+}

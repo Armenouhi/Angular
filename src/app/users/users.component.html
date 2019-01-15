@@ -1,0 +1,34 @@
+<p>
+  users works!
+</p>
+
+<ul *ngFor="let user of users">
+  <li >{{user.name}}</li>
+  <li *ngIf="user.name=='Armen'" [class]="myClass" [style.fontSize.px]="fs">{{user.name + " " + user.lastname}}</li>
+</ul>
+
+<div class="row m-4">
+  <div class="col-md-6 d-flex">
+    <button (click)="ChangeColor('red')">Change</button>
+    <button (click)="Cilck()" class="ml-1">Click</button>
+  </div>
+  <div class="col-md-6">
+    <!--<input type="text" (input)="getValue($event.target.value)" >-->   <!-- input-ի value-ն ստանալու համար, գլոբալ $event  -->
+    <input type="text" [(ngModel)]="firstName" placeholder="Name">
+    <input type="text" [(ngModel)]="lastName" placeholder="Lastname" class="ml-1">
+    <input type="text" [(ngModel)]="age" placeholder="Age" class="ml-1">
+    <button (click)="getValue()" class="ml-1">Get Value</button>
+  </div>
+</div>
+
+<div class="row m-4" *ngFor="let r of response">
+  <div class="col-md-4 d-flex justify-content-center">{{r.id}}</div>
+  <div class="col-md-4 d-flex justify-content-center">{{r.title}}</div>
+  <div class="col-md-4 d-flex justify-content-center">
+    <img class="myImage" [src]="r.main_picture" alt="">
+  </div>
+</div>
+
+
+
+
